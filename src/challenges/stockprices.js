@@ -21,8 +21,6 @@ let stockPricesYesterday = [10, 7, 5, 8, 11, 9];
 function getMaxProfitV1(stockPrices) {
 	let sortedList = stockPrices.sort((a,b) => (b - a));
 
-	console.log(sortedList[0] - sortedList[sortedList.length - 1]);
-
 	return (sortedList[0] - sortedList[sortedList.length - 1]);
 }
 
