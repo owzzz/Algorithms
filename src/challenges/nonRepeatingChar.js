@@ -1,17 +1,24 @@
-// Question: How could you find the first non repeating char in a string?
+function firstNonRepeatChar(str) {
+	let len = str.length,
+		char,
+		charCount = {};
 
-function repeatingChar(str) {
-	let tempArray = [];
+	for(var i = 0; i < len; i++) {
+		char = str[i];
 
-	console.log(str);
-
-	for(var i = 0; i < str.length; i++) {
-		if(str[i] == ' ' || tempArray.indexOf(str[i]) == -1) {
-			tempArray.push(str[i]);
+		if(charCount[char]) {
+			charCount[char]++;
 		} else {
-			return str[i];
+			charCount[char] = 1;
+		}
+	}
+
+	for(var j in charCount) {
+		if(charCount[j] == 1) {
+			return j;
 		}
 	}
 }
 
-console.log(repeatingChar('the quick brown fox jumps then quickly blow air'));
+
+console.log(firstNonRepeatChar('the quick brown fox jumps then quickly blow air'));

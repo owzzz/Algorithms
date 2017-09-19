@@ -2,15 +2,15 @@
 
 
 function removeDuplicates(arr) {
-	let outArr = [];
+	let outArray = [];
 
-	for(var i = 0; i < arr.length; i++) {
-		if(outArr.indexOf(arr[i]) == -1) {
-			outArr.push(arr[i]);
+	for(var i=0; i < arr.length; i++) {
+		if(outArray.indexOf(arr[i]) === -1) {
+			outArray.push(arr[i]);
 		}
 	}
 
-	return outArr;
+	return outArray;
 }
 
 console.log(removeDuplicates([1,3,3,3,1,5,6,7,8,1]));

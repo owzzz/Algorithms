@@ -1,27 +1,26 @@
-function reverseWords(sentence) {
-	let sent = sentence.split(' ');
-	if(!sent && sent.length < 2) return sent;
+function reverseWords(str) {
+	if(!str || str.length < 2 || typeof str !== 'string') return str;
 
-	return sent.reverse().join(' ');
+	return str.split(' ').reverse().join(' ');
 }
 
 console.log(reverseWords('Owain David Llewellyn'));
 
 
 function fancyReverseWords(str) {
-	let outStr = [],
-		wordCount = 0;
+	let outArray = [],
+		count = 0;
 
 	for(var i = str.length-1; i >= 0; i--) {
 		if(str[i] == '' || i == 0) {
-			outStr.push(str.substr(i, wordCount+1));
-			wordCount = 0;
+			outArray.push(str.substr(i, count+1));
+			count = 0;
 		} else {
-			wordCount++;
+			count++;
 		}
 	}
 
-	return outStr.join(' ');
+	return outArray.join('');
 }
 
 console.log(fancyReverseWords('Owain David Llewellyn'));

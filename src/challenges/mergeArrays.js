@@ -16,28 +16,21 @@
 
 function mergeArrays(a, b) {
 	let outArray = [],
-		itemA = a[0],
-		itemB = b[0],
+		elA = a[0],
+		elB = b[0],
 		i = 1,
 		j = 1;
 
 	if(a.length === 0) return b;
 	if(b.length === 0) return a;
 
-	while(itemA || itemB) {
-		if((itemA && !itemB) || itemA < itemB) {
-			console.log('ITEMA', itemA);
-			outArray.push(itemA);
-
-			itemA = a[i++];
-
-			console.log('After update itemA', itemA);
+	while(elA || elB) {
+		if((elA && !elB) || elA < elB) {
+			outArray.push(elA);
+			elA = a[i++];
 		} else {
-			console.log('ITEMB', itemB);
-			outArray.push(itemB);
-			itemB = b[j++];
-
-			console.log('After update itemB', itemB);
+			outArray.push(elB);
+			elB = b[j++];
 		}
 	}
 
@@ -46,3 +39,4 @@ function mergeArrays(a, b) {
 
 
 console.log(mergeArrays([2,5,6,9], [1,2,3,29]));
+

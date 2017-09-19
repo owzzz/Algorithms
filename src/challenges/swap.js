@@ -4,14 +4,10 @@ function swap(a,b) {
 
 
 function swapTwoNumbers(a, b) {
-	console.log(`Before Swap: A: ${a} B: ${b}`);
 	b = b-a;
-	console.log('b', b);
 	a = a+b;
-	console.log('a', a)
 	b = a-b;
-	console.log('b', a);
-	console.log(`After Swap: A: ${a} B: ${b}`);
+
 	return [a,b];
 }
 

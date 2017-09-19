@@ -12,7 +12,6 @@ function fancyReverse(string) {
 
 
 	for(var i = string.length; i >= 0; i--){
-		console.log(i);
 		outArray.push(string[i]);
 	}
 
@@ -24,7 +23,7 @@ console.log(fancyReverse('Llewellyn'));
 String.prototype.reverse = function() {
 	if(!this && this.length < 2) return this;
 
-	return this.split('').reverse().join('');
+	return this.split('').reverse().join();
 }
 
-console.log('David'.reverse());
+console.log('David'.reverse();
