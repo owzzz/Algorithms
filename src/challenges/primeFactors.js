@@ -1,8 +1,10 @@
-function primeFactors(num) {
-	let factors = [];
-	let divisor = 2;
+//Question: How could you find all prime factors of a number?
 
-	while(num >= 2) {
+function primeFactors(num) {
+	let factors = [],
+		divisor = 2;
+
+	while(num >= divisor) {
 		if(num % divisor === 0) {
 			factors.push(divisor);
 			num = num / divisor;
@@ -14,5 +16,5 @@ function primeFactors(num) {
 	return factors;
 }
 
-console.log(primeFactors(69));
 
+console.log(primeFactors(69));

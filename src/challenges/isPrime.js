@@ -32,7 +32,7 @@ function isPrime(num) {
 
 	while(num > divisor) {
 		if(num % divisor === 0) {
-			return false
+			return false;
 		} else {
 			divisor++;
 		}
@@ -40,6 +40,8 @@ function isPrime(num) {
 
 	return true;
 }
+
+
 
 console.log(isPrime(2));
 console.log(isPrime(3));
