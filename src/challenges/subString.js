@@ -1,11 +1,7 @@
 // Question: How can you match substring of a sting?
 
 function subString(str, substr) {
-	if(str.match(substr) !== null) {
-		return true;
-	}
-
-	return false;
+	return str.match(substr) !== null ? true : false;
 }
 
 console.log(subString('The Boy Jumped High', 'Jump'));

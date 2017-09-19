@@ -1,24 +1,37 @@
-// Question: How would you check if a word is a palindrome
+function isPalinDrome(str) {
+	let flippedStr = str.split('').reverse().join('');
 
-// word must be odd number
-
-function isPalindrome(str) {
-	let copyStr = str.split('').reverse().join('');
-
-	console.log(str);
-	console.log(copyStr);
-	console.log(str === copyStr);
-
-	if(str === copyStr) {
-		return true
-	} else {
-		return false
+	if(flippedStr === str) {
+		return true;
 	}
+	return false;
 }
 
-console.log(isPalindrome('madam'));
-console.log(isPalindrome('toyota'));
+console.log('----------------------------');
+console.log(isPalinDrome('madam'));
+console.log(isPalinDrome('toyota'));
 
+function isPalinDromeComplex(str) {
+	let char,
+		i = 0,
+		j = str.length-1;
+
+	for(; i < j;) {
+		if(str[i] === str[j]) {
+			i++;
+			j--;
+		} else {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+console.log('----------------------------');
+console.log(isPalinDromeComplex('madam'));
+console.log(isPalinDromeComplex('bomob'));
+console.log(isPalinDromeComplex('toyota'));
 
 function isPalinDromeFancy(str) {
 	let copyStr = str,
@@ -37,6 +50,8 @@ function isPalinDromeFancy(str) {
 
 }
 
-
+console.log('----------------------------');
 console.log(isPalinDromeFancy('madam'));
+console.log(isPalinDromeFancy('bomob'));
 console.log(isPalinDromeFancy('toyota'));
+

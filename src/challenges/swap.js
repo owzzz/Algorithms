@@ -26,4 +26,3 @@ console.log(swap(2,3));
 console.log(swapTwoNumbers(1,2));
 
 console.log(fancySwap(1,2));
-
